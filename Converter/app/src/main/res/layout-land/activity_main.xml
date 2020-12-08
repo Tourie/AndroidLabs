@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerInParent="true"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    tools:context=".MainActivity">
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:orientation="vertical"-->
+    <!--        android:paddingLeft="10dp"-->
+    <!--        android:paddingTop="30dp"-->
+    <!--        android:paddingRight="10dp"-->
+    <!--        app:layout_constraintHorizontal_weight="1"-->
+    <!--        app:layout_constraintTop_toTopOf="parent">-->
+
+    <!--        <Spinner-->
+    <!--            android:id="@+id/category"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="35dp"-->
+    <!--            android:layout_marginTop="32dp" />-->
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginTop="20dp"-->
+    <!--            android:layout_marginBottom="10dp"-->
+    <!--            android:animateLayoutChanges="false"-->
+    <!--            android:baselineAligned="false"-->
+    <!--            android:orientation="horizontal"-->
+    <!--            android:weightSum="3">-->
+
+    <!--            <LinearLayout-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="match_parent"-->
+    <!--                android:layout_marginEnd="20dp"-->
+    <!--                android:layout_marginRight="20dp"-->
+    <!--                android:layout_weight="1"-->
+    <!--                android:orientation="vertical"-->
+    <!--                android:weightSum="2">-->
+
+    <!--                <Spinner-->
+    <!--                    android:id="@+id/input_unit"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_marginBottom="10dp" />-->
+
+    <!--                <TextView-->
+    <!--                    android:id="@+id/input_str"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="0dp"-->
+    <!--                    android:hint="@string/input_str"-->
+    <!--                    android:paddingTop="5dp"-->
+    <!--                    android:paddingBottom="5dp" />-->
+    <!--            </LinearLayout>-->
+
+    <!--            <LinearLayout-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="match_parent"-->
+    <!--                android:layout_weight="2"-->
+    <!--                android:orientation="vertical">-->
+
+    <!--                <Spinner-->
+    <!--                    android:id="@+id/output_unit"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:layout_marginBottom="10dp" />-->
+
+    <!--                <TextView-->
+    <!--                    android:id="@+id/output_str"-->
+    <!--                    android:layout_width="match_parent"-->
+    <!--                    android:layout_height="wrap_content"-->
+    <!--                    android:paddingTop="5dp"-->
+    <!--                    android:paddingBottom="5dp" />-->
+
+    <!--            </LinearLayout>-->
+
+    <!--        </LinearLayout>-->
+
+    <!--        <Button-->
+    <!--            android:id="@+id/button3"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:height="6dp"-->
+    <!--            android:text="@string/convert_button" />-->
+
+    <!--    </LinearLayout>-->
+
+    <fragment
+        android:id="@+id/fragment"
+        android:name="com.example.converter.ConvertFragmentInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <fragment
+        android:id="@+id/fragment2"
+        android:name="com.example.converter.KeyboardFragment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
