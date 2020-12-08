@@ -6,6 +6,9 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Lifecycle;
 import androidx.lifecycle.OnLifecycleEvent;
 
+import android.content.ClipData;
+import android.content.ClipboardManager;
+
 import android.app.FragmentManager;
 import android.app.FragmentTransaction;
 import android.content.Context;
@@ -193,4 +196,5 @@ public class MainActivity extends AppCompatActivity {
         }
         spinner.setSelection(index,true);
     }
+
 }
