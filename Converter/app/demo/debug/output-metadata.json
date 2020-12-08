@@ -4,15 +4,15 @@
     "type": "APK",
     "kind": "Directory"
   },
-  "applicationId": "com.example.converter.demo.full",
-  "variantName": "processFullReleaseResources",
+  "applicationId": "com.example.converter.demo.demo",
+  "variantName": "processDemoDebugResources",
   "elements": [
     {
       "type": "SINGLE",
       "filters": [],
       "versionCode": 1,
       "versionName": "1.01",
-      "outputFile": "app-full-release.apk"
+      "outputFile": "app-demo-debug.apk"
     }
   ]
 }

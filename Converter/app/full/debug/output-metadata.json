@@ -5,14 +5,14 @@
     "kind": "Directory"
   },
   "applicationId": "com.example.converter.demo.full",
-  "variantName": "processFullReleaseResources",
+  "variantName": "processFullDebugResources",
   "elements": [
     {
       "type": "SINGLE",
       "filters": [],
       "versionCode": 1,
       "versionName": "1.01",
-      "outputFile": "app-full-release.apk"
+      "outputFile": "app-full-debug.apk"
     }
   ]
 }
