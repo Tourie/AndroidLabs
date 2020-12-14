@@ -2,6 +2,11 @@ plugins {
     id 'com.android.application'
 }
 
+apply from: '../git.gradle'
+
+def tag = getLastTag()
+def patch = getPatch()
+
 android {
     signingConfigs {
         debug {
@@ -18,8 +23,8 @@ android {
         applicationId "com.example.converter"
         minSdkVersion 16
         targetSdkVersion 30
-        versionCode 1
-        versionName "1.0"
+        versionCode generateVersionCode(tag , patch)
+        versionName "${tag}.${patch}"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         applicationIdSuffix 'demo'
