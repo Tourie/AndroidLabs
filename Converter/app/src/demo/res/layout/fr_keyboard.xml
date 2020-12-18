@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:columnCount="3"
+    android:layout_gravity="center"
+    android:orientation="horizontal"
+    android:useDefaultMargins="true">
+
+    <Button
+        android:text="@string/_1"
+        android:onClick="onNumberClick"/>
+    <Button
+        android:text="@string/_2"
+        android:onClick="onNumberClick"/>
+    <Button
+        android:text="@string/_3"
+        android:onClick="onNumberClick"/>
+    <Button
+        android:text="@string/_4"
+        android:onClick="onNumberClick"/>
+    <Button
+        android:text="@string/_5"
+        android:onClick="onNumberClick"/>
+    <Button
+        android:text="@string/_6"
+        android:onClick="onNumberClick"/>
+    <Button
+        android:text="@string/_7"
+        android:onClick="onNumberClick"/>
+    <Button
+        android:text="@string/_8"
+        android:onClick="onNumberClick"/>
+    <Button
+        android:text="@string/_9"
+        android:onClick="onNumberClick"/>
+    <Button
+        android:text="@string/_0"
+        android:onClick="onNumberClick"/>
+
+    <Button
+        android:text="@string/x"
+        android:onClick="onDeleteClick"/>
+
+</GridLayout>
