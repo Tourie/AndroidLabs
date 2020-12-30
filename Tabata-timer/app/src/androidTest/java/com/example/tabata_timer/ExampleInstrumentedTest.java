@@ -1,4 +1,4 @@
-package com.example.tabatatimer;
+package com.example.tabata_timer;
 
 import android.content.Context;
 
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
     public void useAppContext() {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getInstrumentation().getTargetContext();
-        assertEquals("com.example.tabatatimer", appContext.getPackageName());
+        assertEquals("com.example.tabata_timer", appContext.getPackageName());
     }
 }

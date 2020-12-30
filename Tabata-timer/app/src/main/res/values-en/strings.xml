@@ -1,0 +1,58 @@
+<resources>
+
+    <string-array name="languages">
+        <item>Russian</item>
+        <item>English</item>
+    </string-array>
+
+    <string-array name="font_sizes">
+        <item>Small</item>
+        <item>Medium</item>
+        <item>Big</item>
+    </string-array>
+
+    <string name="app_name">Tabata-timer</string>
+    <string name="title_hint">Enter title</string>
+    <string name="Prepare">Preparation</string>
+    <string name="color">Color</string>
+    <string name="repeats">Repeats num</string>
+    <string name="_0">0</string>
+    <string name="minus">-</string>
+    <string name="_1">1</string>
+    <string name="plus">+</string>
+    <string name="addWorkActivity">Add new activity</string>
+    <string name="startWorking">Start execution</string>
+    <string name="details">More details</string>
+    <string name="save_button">Save and exit</string>
+    <string name="new_sequence">New sequence</string>
+    <string name="title_sequence">Sequence title</string>
+    <string name="delete">Delete</string>
+    <string name="add">+</string>
+    <string name="change_work_activity">Save changes</string>
+    <string name="start">Start</string>
+    <string name="pause">Pause</string>
+    <string name="title_activity_settings">Settings</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="settings">Settings</string>
+    <string name="font">Font</string>
+    <string name="lang">Language</string>
+    <string name="next">Next</string>
+    <string name="chooseLang">Choose language</string>
+    <string name="chooseFont">Choose font</string>
+    <string name="nightTheme">Dark theme</string>
+    <string name="theme">Theme</string>
+</resources>

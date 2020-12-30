@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name = "Tabata timer"
+rootProject.name = "Tabata-timer"

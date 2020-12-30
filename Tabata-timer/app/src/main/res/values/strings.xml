@@ -1,3 +1,68 @@
 <resources>
-    <string name="app_name">Tabata timer</string>
+
+    <string-array name="languages">
+        <item>Русский</item>
+        <item>Английский</item>
+    </string-array>
+
+    <string-array name="font_sizes">
+        <item>Маленький</item>
+        <item>Средний</item>
+        <item>Большой</item>
+    </string-array>
+
+    <string-array name="languages_val">
+        <item>ru</item>
+        <item>en</item>
+    </string-array>
+
+    <string-array name="font_sizes_val">
+        <item>1.0</item>
+        <item>1.25</item>
+        <item>1.35</item>
+    </string-array>
+
+    <string name="app_name">Tabata-timer</string>
+    <string name="title_hint">Введите название</string>
+    <string name="Prepare">Подготовка</string>
+    <string name="color">Цвет</string>
+    <string name="repeats">Число повторений</string>
+    <string name="_0">0</string>
+    <string name="minus">-</string>
+    <string name="_1">1</string>
+    <string name="plus">+</string>
+    <string name="addWorkActivity">Добавить новую активность</string>
+    <string name="startWorking">Начать выполнение</string>
+    <string name="details">Подробнее</string>
+    <string name="save_button">Сохранить и выйти</string>
+    <string name="new_sequence">Новая последовательноть</string>
+    <string name="title_sequence">Название последовательности</string>
+    <string name="delete">Удалить</string>
+    <string name="add">+</string>
+    <string name="change_work_activity">Сохранить изменения</string>
+    <string name="start">Старт</string>
+    <string name="pause">Пауза</string>
+    <string name="title_activity_settings">Настройки</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Сообщения</string>
+    <string name="sync_header">Синхронизация</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Ваша подпись</string>
+    <string name="reply_title">Действие ответа по умолчанию</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Периодически синхронизировать электронную почту</string>
+    <string name="attachment_title">Скачать входящие вложения</string>
+    <string name="attachment_summary_on">Автоматически загружать вложения для входящих писем</string>
+    <string name="attachment_summary_off">Загружать вложения только по запросу вручную</string>
+    <string name="settings">Настройки</string>
+    <string name="font">Шрифт</string>
+    <string name="lang">Язык</string>
+    <string name="next">Следующая</string>
+    <string name="chooseLang">Выберите язык</string>
+    <string name="chooseFont">Выберите шрифт</string>
+    <string name="nightTheme">Ночная тема</string>
+    <string name="theme">Тема</string>
 </resources>

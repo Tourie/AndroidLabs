@@ -1,4 +1,4 @@
-package com.example.tabatatimer;
+package com.example.tabata_timer;
 
 import org.junit.Test;
 
