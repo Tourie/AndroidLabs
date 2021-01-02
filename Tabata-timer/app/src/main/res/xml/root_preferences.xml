@@ -1,0 +1,36 @@
+
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="@string/lang">
+
+        <ListPreference
+            app:defaultValue="ru"
+            app:entries="@array/languages"
+            app:entryValues="@array/languages_val"
+            app:key="lang"
+            app:title="@string/chooseLang"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/font">
+
+        <ListPreference
+            app:defaultValue="1.0"
+            app:entries="@array/font_sizes"
+            app:entryValues="@array/font_sizes_val"
+            app:key="font_size"
+            app:title="@string/chooseFont"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="@string/theme">
+
+        <SwitchPreferenceCompat
+            app:key="night_theme"
+            app:title="@string/nightTheme" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

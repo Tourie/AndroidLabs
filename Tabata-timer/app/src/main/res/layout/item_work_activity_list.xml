@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="10dp"
+    app:layout_constraintHorizontal_weight="100"
+    android:orientation="vertical"
+    android:gravity="center">
+    <EditText
+        android:id="@+id/work_activity_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="200sp"
+        android:hint="@string/title_hint"
+        android:paddingHorizontal="10sp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/minus_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/minus"
+            android:gravity="center" />
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginHorizontal="10dp" />
+        <Button
+            android:id="@+id/plus_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/plus"
+            android:gravity="center" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/work_activity_change"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/change_work_activity"/>
+    <Button
+        android:id="@+id/work_activity_delete"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/delete"/>
+
+
+</LinearLayout>
