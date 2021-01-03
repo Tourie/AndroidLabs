@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">SeaBattle</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="authorization">Авторизация</string>
+    <string name="registration">Регистрация</string>
+    <string name="exit">Выход</string>
+    <string name="create_game">Создать игру</string>
+    <string name="connect_game">Подключиться к игре</string>
+    <string name="my_profile">Мой профиль</string>
+    <string name="my_statistics">Статистика</string>
+    <string name="room_id">Id комнаты:</string>
+    <string name="copy_id">Скопировать id</string>
+    <string name="set_ship">Поставьте корабль:</string>
+    <string name="check">Проверить</string>
+</resources>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/create_game"
+        android:id="@+id/create_game_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/connect_game"
+        android:id="@+id/connect_game_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/my_statistics"
+        android:id="@+id/my_statistics_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/my_profile"
+        android:id="@+id/my_profile_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/exit"
+        android:id="@+id/exit_btn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</LinearLayout>
