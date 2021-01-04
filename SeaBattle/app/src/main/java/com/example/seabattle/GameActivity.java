@@ -180,7 +180,7 @@ public class GameActivity extends AppCompatActivity {
                                         stats.put("/total", user.total+1);
                                     }
                                     else {
-                                        stats.put("/total", 0);
+                                        stats.put("/total", 1);
                                     }
                                     userProfile.updateChildren(stats);
                                 }
@@ -212,6 +212,24 @@ public class GameActivity extends AppCompatActivity {
             return true;
         } else if(enemies_killed_ships == 20){
             Toast.makeText(getApplicationContext(), "Вы выиграли", Toast.LENGTH_SHORT);
+            DatabaseReference userProfile = FirebaseDatabase.getInstance().getReference("profiles").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
+            userProfile.addListenerForSingleValueEvent(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    User user = snapshot.getValue(User.class);
+                    Map<String, Object> stats = new HashMap<>();
+                    if (user.total != null) {
+                        stats.put("/wins", user.total + 1);
+                    } else {
+                        stats.put("/wins", 1);
+                    }
+                    userProfile.updateChildren(stats);
+                }
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
+
+                }
+            });
             return true;
         } else {
             return false;
