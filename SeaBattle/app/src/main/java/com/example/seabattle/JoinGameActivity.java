@@ -18,12 +18,14 @@ import android.widget.Toast;
 import com.example.seabattle.models.Room;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
+import com.google.gson.Gson;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -72,23 +74,24 @@ public class JoinGameActivity extends CreateGameActivity {
         String roomIdString = roomId.getText().toString();
         Room room = new Room();
         room.id = roomId.getText().toString();
-        for (int i=0; i<10; i++){
-            Integer[] integers = new Integer[10];
-            for (int index = 0; index<10; ++index){
-                integers[index] = fieldArray[i][index];
-            }
-            List<Integer> list = Arrays.asList(integers);
-            room.field2.add(list);
-        }
+//        for (int i=0; i<10; i++){
+//            Integer[] integers = new Integer[10];
+//            for (int index = 0; index<10; ++index){
+//                integers[index] = fieldArray[i][index];
+//            }
+//            List<Integer> list = Arrays.asList(integers);
+//            room.field2.add(list);
+//        }
 
+        Gson gson = new Gson();
         Map<String, Object> update = new HashMap<>();
-        update.put("/id", roomId.getText().toString());
-        update.put("/field2", room.field2);
-        mRef.child(roomId.getText().toString()).updateChildren(update).addOnCompleteListener(task -> {
+        update.put("/user", FirebaseAuth.getInstance().getCurrentUser().getUid());
+        update.put("/field2", gson.toJson(fieldArray));
+        mRef.child(roomId.getText().toString().replace("\"", "").trim()).updateChildren(update).addOnCompleteListener(task -> {
             if(task.isSuccessful()){
                 //start game
                 Intent localIntent = new Intent(getApplicationContext(), GameActivity.class);
-                localIntent.putExtra("RoomId", roomId.getText().toString());
+                localIntent.putExtra("RoomId", roomId.getText().toString().replace("\"", "").trim());
                 startActivity(localIntent);
                 finish();
             } else {

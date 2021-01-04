@@ -17,12 +17,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.seabattle.models.Room;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
+import com.google.gson.Gson;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -35,10 +37,13 @@ import java.util.stream.Collectors;
 
 public class CreateGameActivity extends AppCompatActivity {
 
+    int state = 0;
     LinearLayout field;
     TextView roomId;
     Button copyId;
     TextView instruction;
+
+    DatabaseReference myRef;
 
     protected int stage = 0;
     protected ArrayList<Integer> clickedButtonsId = new ArrayList<Integer>();
@@ -223,40 +228,39 @@ public class CreateGameActivity extends AppCompatActivity {
     }
 
     protected void AfterFieldCreation() {
-        Room field = new Room();
-        field.id = roomId.getText().toString();
-        for (int i=0; i<10; i++){
-            Integer[] integers = new Integer[10];
-            for (int index = 0; index<10; ++index){
-                integers[index] = fieldArray[i][index];
-            }
-            List<Integer> list = Arrays.asList(integers);
-            field.field1.add(list);
-        }
+        Room newRoom = new Room();
+        newRoom.id = roomId.getText().toString();
+
+        Gson gson = new Gson();
+
         // Save and create field in db
 
         FirebaseDatabase db = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = db.getReference("Rooms");
-        myRef.child(roomId.getText().toString()).setValue(field);
+        myRef = db.getReference("Rooms");
+        myRef.child(roomId.getText().toString()).setValue(newRoom.id);
+
+        Map<String, Object> field = new HashMap<>();
+        field.put("/id", newRoom.id);
+        field.put("/field1", gson.toJson(fieldArray));
+        field.put("/hostUser", FirebaseAuth.getInstance().getCurrentUser().getUid());
+        myRef.child(roomId.getText().toString()).updateChildren(field);
 
         Query query = myRef;
         query.addChildEventListener(new ChildEventListener() {
             @Override
             public void onChildAdded(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-//                Room room = snapshot.getValue(Room.class);
-//                if (room.id == roomId.getText().toString()){
-//                    if (room.field2.size()>0){
-//
-//                    }
-//                }
+
             }
 
             @Override
             public void onChildChanged(@NonNull DataSnapshot snapshot, @Nullable String previousChildName) {
-                Intent localIntent = new Intent(getApplicationContext(), GameActivity.class);
-                localIntent.putExtra("RoomId", roomId.getText().toString());
-                startActivity(localIntent);
-                finish();
+                state++;
+                if (state == 2) {
+                    Intent localIntent = new Intent(getApplicationContext(), GameActivity.class);
+                    localIntent.putExtra("RoomId", roomId.getText().toString());
+                    startActivity(localIntent);
+                    finish();
+                }
             }
 
             @Override

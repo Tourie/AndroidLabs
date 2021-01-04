@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
     FirebaseAuth mAuth;
     Button createNewGame;
     Button joinGame;
+    Button myAccount;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +29,9 @@ public class MainActivity extends AppCompatActivity {
         exit_btn = findViewById(R.id.exit_btn);
         createNewGame = findViewById(R.id.create_game_btn);
         joinGame = findViewById(R.id.connect_game_btn);
+        myAccount = findViewById(R.id.my_profile_btn);
+
+
 
         createNewGame.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -43,6 +47,15 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        myAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MyAccountActivity.class);
+                startActivity(intent);
+            }
+        });
+
         exit_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
