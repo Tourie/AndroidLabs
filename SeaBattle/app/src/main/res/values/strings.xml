@@ -13,4 +13,6 @@
     <string name="copy_id">Скопировать id</string>
     <string name="set_ship">Поставьте корабль:</string>
     <string name="check">Проверить</string>
+    <string name="input_id_hint">Вставьте полученный id</string>
+    <string name="join_Game">Подключиться к игре</string>
 </resources>
