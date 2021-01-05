@@ -208,18 +208,18 @@ public class GameActivity extends AppCompatActivity {
             enemies_killed_ships += room_cur.field2[i/10][i%10] == 3 ? 1 : 0;
         }
         if (my_killed_ships == 20){
-            Toast.makeText(getApplicationContext(), "Вы проиграли", Toast.LENGTH_SHORT);
+            Toast.makeText(getApplicationContext(), "Вы проиграли", Toast.LENGTH_SHORT).show();
             return true;
         } else if(enemies_killed_ships == 20){
-            Toast.makeText(getApplicationContext(), "Вы выиграли", Toast.LENGTH_SHORT);
+            Toast.makeText(getApplicationContext(), "Вы выиграли", Toast.LENGTH_SHORT).show();
             DatabaseReference userProfile = FirebaseDatabase.getInstance().getReference("profiles").child(FirebaseAuth.getInstance().getCurrentUser().getUid());
             userProfile.addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     User user = snapshot.getValue(User.class);
                     Map<String, Object> stats = new HashMap<>();
-                    if (user.total != null) {
-                        stats.put("/wins", user.total + 1);
+                    if (user.wins != null) {
+                        stats.put("/wins", user.wins + 1);
                     } else {
                         stats.put("/wins", 1);
                     }
