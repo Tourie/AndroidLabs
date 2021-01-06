@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "990391706569",
+    "project_id": "seabattle-7cce4",
+    "storage_bucket": "seabattle-7cce4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:990391706569:android:b654bb7cdd850db6413e18",
+        "android_client_info": {
+          "package_name": "com.example.seabattle"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "990391706569-htjcsvf6aqhub1a8dmib1qek2gvrnfrn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDMuysCwfsas_F7odZg5R6MrduINSu_HjY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "990391706569-htjcsvf6aqhub1a8dmib1qek2gvrnfrn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
